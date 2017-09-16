@@ -1,0 +1,35 @@
+.from{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  margin: 100px auto;
+}
+.bdi{
+  display: flex;
+  flex-wrap: wrap;
+}
+.from input{
+  margin-top: 10px;
+  height: 30px;
+  border: 1px solid blue;
+  width: 250px;
+}
+.from span{
+  width: 45px;
+  padding-top: 15px;
+}
+.from button{
+  margin-top: 10px;
+}
+.fanhui{
+  width: 300px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 10px;
+  height: 25px;
+  background: linear-gradient(yellow,orange);
+  text-decoration: none;
+  color: #000;
+}

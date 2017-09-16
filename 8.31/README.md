@@ -34,3 +34,4 @@ fun("sss")
 参数一个去掉()方法一个去掉{}
 默认就 return 最后一个
 所以最终可以写成 const fun = name => name + name
+### 数组扩展中find()和findIndex()

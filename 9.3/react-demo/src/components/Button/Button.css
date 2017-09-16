@@ -1,0 +1,16 @@
+.biaoti{
+  line-height: 30px;
+  width: 140px;
+  margin: 0 auto;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  user-select:none;
+}
+h2{
+  text-align: center;
+  width: 150px;
+  user-select:none;
+}

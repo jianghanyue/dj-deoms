@@ -1,0 +1,29 @@
+.dog-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: 120px;
+  background-position: center center;
+  margin: 10px;
+}
+.dog-list{
+  display: flex;
+  border: 2px solid red;
+  flex-wrap: wrap;
+
+}
+.dog-list a{
+  display: block;
+}
+.add{
+  width: 70px;
+  height: 70px;
+  line-height: 60px;
+  font-size: 75px;
+  border-radius: 50%;
+  border: 5px dashed #ccc;
+  text-align: center;
+  color: #ccc;
+  cursor: pointer;
+  margin: 10px;
+}

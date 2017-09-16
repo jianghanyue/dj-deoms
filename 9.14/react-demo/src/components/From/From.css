@@ -1,0 +1,20 @@
+.from{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 1px #ccc;
+  padding: 20px
+}
+.from input{
+  height: 25px;
+}
+.from button{
+  margin-top: 15px;
+  height: 30px
+}

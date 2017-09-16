@@ -1,0 +1,72 @@
+.home{
+  background-color: #212121;
+  height: 100vh;
+  padding-top: 35px;
+}
+h1{
+  margin: 0
+}
+.ul{
+  margin-top: 30px;
+  height: 200px;
+  overflow: auto;
+}
+.li{
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 21px;
+}
+.chuangkou{
+  background-color: #fff;
+  margin: 0 auto;
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  padding-top: 30px;
+}
+button{
+  margin: 25px;
+}
+.input{
+  position: relative;
+}
+.input input{
+  height: 22px;
+}
+.add{
+  font-size: 30px;
+  border-radius: 50%;
+  line-height: 32px;
+  width: 35px;
+  height: 35px;
+  background-color: #ccc;
+  display: block;
+  position: absolute;
+  right: 95px;
+  top: -3px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 #212121
+}
+.add img{
+  width: 20px;
+  height: 20px;
+}
+.li span:nth-child(2){
+  display: none;
+}
+.chuangkou .ul .li .block{
+  display: block
+}
+.block img{
+  width: 20px;
+  height: 20px;
+}
+.chuangkou .ul .li .huaxian{
+  display: block;
+  text-decoration: line-through;
+}
+.li .xiaoshi{
+  display: none;
+}

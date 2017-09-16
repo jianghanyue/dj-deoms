@@ -1,0 +1,37 @@
+.dog{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+}
+.bd{
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.bd>span{
+  padding-top: 13px;
+  width: 40px;
+}
+.dog input{
+  resize: none;
+  height: 30px;
+  text-align: center;
+  width: 450px;
+  margin: 10px auto;
+  font-size: 16px
+}
+.dog .out{
+  outline: 0;
+  border: 0;
+}
+.dog button{
+  width: 500px;
+  margin: 10px auto;
+}
+.dog .fanhui{
+  width: 500px;
+  margin: 10px auto;
+}
