@@ -2,18 +2,6 @@ import React, { Component } from 'react'
 import './Settle.css'
 
 class Settle extends Component {
-  state={
-    commodity:[],
-    zongjia:'00.0'
-  }
-
-
-  componentWillMount = () => {
-    // const commodity = this.props.commodity.filter(t => t.compeled==true)
-    this.setState({
-      commodity:this.props.commodity.filter(t => t.compeled==true)
-    })
-  }
   render() {
   const commodity = this.props.commodity.filter(t => t.compeled==true)
     const liList = commodity.map(t => (
@@ -27,11 +15,11 @@ class Settle extends Component {
         </div>
         <div className="shuliang">
           <a href="javascript:;" className="j"
-            onClick={()=> this.props.suanClick('-',t,t.jiage)}
+            onClick={()=> this.props.suanClick('-',t,commodity)}
           >-</a>
           <span>{t.shuliang}</span>
           <a href="javascript:;" className="j"
-            onClick={()=>this.props.suanClick('+',t,t.jiage)}
+            onClick={()=>this.props.suanClick('+',t,commodity)}
           >+</a>
         </div>
       </li>

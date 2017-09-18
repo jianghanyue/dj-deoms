@@ -30,7 +30,8 @@ class Home extends Component {
         shuliang:1
       }
     ],
-    zongjia:''
+    zongjia:'',
+    newcommodity:[]
   }
   buy = (t) => {
     if(t){
@@ -42,42 +43,51 @@ class Home extends Component {
   handleClick = (t) => {
     let newcommodity = this.state.commodity
     newcommodity.find(re => re.id==t.id).compeled=true
+    let newcommodity2 = newcommodity.filter(t => t.compeled==true)
     this.setState({
-      commodity:newcommodity
+      commodity:newcommodity,
+      zongjia:this.calTotal(newcommodity2)
     })
-    this.jisuanzongjia(t.jiage)
   }
-  suanClick = (text,t,n) => {
+  suanClick = (text,t,commodity) => {
     let newcommodity = this.state.commodity
-
     if(text=='-'){
       if(t.shuliang>0){
         newcommodity.find(re => re.id==t.id).shuliang--
         this.setState({
           commodity:newcommodity
         })
-        this.jisuanzongjia(n,text)
+        // this.jisuanzongjia(n,text)
       }
     }else{
       newcommodity.find(re => re.id==t.id).shuliang++
       this.setState({
         commodity:newcommodity
       })
-      this.jisuanzongjia(n)
+      // this.jisuanzongjia(n)
     }
-
+    console.log(newcommodity);
+    this.setState({
+      zongjia:this.calTotal(commodity)
+    })
   }
-  jisuanzongjia = (n,text) => {
-    if(text=='-'){
-      this.setState({
-        zongjia:Number(this.state.zongjia)-Number(n)
-      })
-    }else{
-      this.setState({
-        zongjia:Number(this.state.zongjia)+Number(n)
-      })
-    }
-    console.log(n);
+  // jisuanzongjia = (n,text) => {
+  //   if(text=='-'){
+  //     this.setState({
+  //       zongjia:Number(this.state.zongjia)-Number(n)
+  //     })
+  //   }else{
+  //     this.setState({
+  //       zongjia:Number(this.state.zongjia)+Number(n)
+  //     })
+  //   }
+  //   console.log(n);
+  // }
+  calTotal = (commodity) => {
+    const total = commodity.reduce((sum,t) => {
+      return sum + t.jiage * t.shuliang
+    },0)
+    return total
   }
   render() {
     const list = this.state.commodity.map(t => (
@@ -95,7 +105,7 @@ class Home extends Component {
           {list}
         </div>
         <Settle commodity={this.state.commodity} suanClick={this.suanClick} jisuanzongjia={this.jisuanzongjia}
-          zongjia={this.state.zongjia}/>
+          zongjia={this.state.zongjia} calTotal={this.calTotal}/>
       </div>
     )
   }
